@@ -12,7 +12,7 @@
         <Label x:Name="lblSenha" Content="Senha" HorizontalAlignment="Left" Margin="175,125,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txbUsuario" HorizontalAlignment="Left" Height="23" Margin="137,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txbSenha" HorizontalAlignment="Left" Height="23" Margin="137,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="txbEntrar" Content="Entrar" HorizontalAlignment="Left" Margin="241,200,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="txbEntrar" Content="Entrar" HorizontalAlignment="Left" Margin="241,200,0,0" VerticalAlignment="Top" Width="76" Click="txbEntrar_Click"/>
         <Label x:Name="lblRecuperarSenha" Content="Recuperar a senha" HorizontalAlignment="Left" Margin="80,198,0,0" VerticalAlignment="Top" Foreground="#FFC31515"/>
 
     </Grid>

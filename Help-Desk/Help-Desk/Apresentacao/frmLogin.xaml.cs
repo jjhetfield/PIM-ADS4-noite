@@ -24,5 +24,11 @@ namespace Help_Desk
         {
             InitializeComponent();
         }
+
+        private void txbEntrar_Click(object sender, RoutedEventArgs e)
+        {
+            Apresentacao.frmChamado frmC = new Apresentacao.frmChamado();
+            frmC.ShowDialog();
+        }
     }
 }

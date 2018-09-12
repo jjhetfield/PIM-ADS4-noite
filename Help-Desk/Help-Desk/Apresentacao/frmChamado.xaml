@@ -21,12 +21,13 @@
         <ComboBox HorizontalAlignment="Left" Margin="82,130,0,0" VerticalAlignment="Top" Width="333" Height="26" TabIndex="2">
             <ComboBoxItem Content="ComboBoxItem" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Label x:Name="lblRequisitor" Content="Requisitor" HorizontalAlignment="Left" Margin="82,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSolicitante" Content="Solicitante" HorizontalAlignment="Left" Margin="82,33,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblPrioridade" Content="Prioridade do pedido" HorizontalAlignment="Left" Margin="81,185,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblSetor" Content="Setor" HorizontalAlignment="Left" Margin="81,102,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblDescrição" Content="Descrição do pedido" HorizontalAlignment="Left" Margin="81,339,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txbData" HorizontalAlignment="Left" Height="22" Margin="81,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" TabIndex="4"/>
         <Label x:Name="lblData" Content="Data do pedido" HorizontalAlignment="Left" Margin="81,262,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnSolicitar" Content="Solicitar" HorizontalAlignment="Left" Margin="507,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="109" TabIndex="6"/>
+        <Button x:Name="btnLimpar" Content="Limpar campos" HorizontalAlignment="Left" Margin="336,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" TabIndex="6"/>
     </Grid>
 </Window>
