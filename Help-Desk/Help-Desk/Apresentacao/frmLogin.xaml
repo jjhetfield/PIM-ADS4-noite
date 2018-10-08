@@ -5,15 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Help_Desk"
         mc:Ignorable="d"
-        Title="Login" Height="300" Width="400
-        ">
+        Title="Login" Height="337.218" Width="477.82">
     <Grid>
-        <Label x:Name="lblUsuario" Content="Usuário" HorizontalAlignment="Left" Margin="175,45,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSenha" Content="Senha" HorizontalAlignment="Left" Margin="175,125,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbUsuario" HorizontalAlignment="Left" Height="23" Margin="137,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbSenha" HorizontalAlignment="Left" Height="23" Margin="137,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="txbEntrar" Content="Entrar" HorizontalAlignment="Left" Margin="241,200,0,0" VerticalAlignment="Top" Width="76" Click="txbEntrar_Click"/>
-        <Label x:Name="lblRecuperarSenha" Content="Recuperar a senha" HorizontalAlignment="Left" Margin="80,198,0,0" VerticalAlignment="Top" Foreground="#FFC31515"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblUsuario" Content="Usuário" HorizontalAlignment="Left" Margin="259,59,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="50"/>
+        <Label x:Name="lblSenha" Content="Senha" HorizontalAlignment="Left" Margin="267,139,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="42"/>
+        <TextBox x:Name="txbUsuario" HorizontalAlignment="Left" Height="23" Margin="314,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+        <TextBox x:Name="txbSenha" HorizontalAlignment="Left" Height="23" Margin="314,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" AutomationProperties.IsColumnHeader="True" Background="{x:Null}"/>
+        <Button x:Name="txbEntrar" Content="Entrar" HorizontalAlignment="Left" Margin="334,186,0,0" VerticalAlignment="Top" Width="100" Click="txbEntrar_Click" Grid.Column="2" Height="22"/>
+        <Label x:Name="lblRecuperarSenha" Content="Recuperar a senha" HorizontalAlignment="Left" Margin="334,213,0,0" VerticalAlignment="Top" Foreground="#FFC31515" Width="105" Grid.Column="2" Height="26"/>
+        <Image Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="100" Margin="52,108,0,0" VerticalAlignment="Top" Width="100">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
 
     </Grid>
 </Window>

@@ -76,6 +76,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ChamadoDAO.cs" />
+    <Compile Include="DAL\Conexao.cs" />
+    <Compile Include="DAL\intChamadoDAO.cs" />
+    <Compile Include="Modelo\atbEstaticos.cs" />
+    <Compile Include="Modelo\Chamado.cs" />
+    <Compile Include="Modelo\Controle.cs" />
+    <Compile Include="Modelo\Validacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,9 +108,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="Modelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

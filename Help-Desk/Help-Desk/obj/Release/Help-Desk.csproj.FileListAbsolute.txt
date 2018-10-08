@@ -1,0 +1,16 @@
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\bin\Release\Help-Desk.exe.config
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\bin\Release\Help-Desk.exe
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\bin\Release\Help-Desk.pdb
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmChamado.g.cs
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmLogin.g.cs
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\App.g.cs
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk_MarkupCompile.cache
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk_MarkupCompile.lref
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmChamado.baml
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmLogin.baml
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.g.resources
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help_Desk.Properties.Resources.resources
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.csproj.GenerateResource.cache
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.csproj.CoreCompileInputs.cache
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.exe
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.pdb

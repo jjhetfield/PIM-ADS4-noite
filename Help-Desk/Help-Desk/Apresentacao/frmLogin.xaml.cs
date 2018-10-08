@@ -23,12 +23,34 @@ namespace Help_Desk
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void txbEntrar_Click(object sender, RoutedEventArgs e)
         {
-            Apresentacao.frmChamado frmC = new Apresentacao.frmChamado();
-            frmC.ShowDialog();
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.Acessar(txbUsuario.Text, txbSenha.Text);
+            if(controle.mensagem.Equals(""))
+
+            { 
+                if (controle.possui)
+                {
+                    MessageBox.Show("logado com sucesso", "Entrando", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Apresentacao.frmChamado frmC = new Apresentacao.frmChamado();
+                    frmLogin.Close();
+                    frmC.ShowDialog();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("login nao encontrado, verifique login e senha", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(controle.mensagem);
+            }
+
         }
     }
 }
