@@ -17,9 +17,10 @@ namespace Help_Desk.DAL
 
         public bool VerificarLogin(String login, String senha)
         {
+            this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = @"select id_Usuario from Acesso where nome_Acesso =@login and senha_Acesso = @senha";
+            cmd.CommandText = @"select id_Usuario, id_Funcionario from Acesso where nome_Acesso =@login and senha_Acesso = @senha";
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@senha", senha);
 
@@ -27,8 +28,15 @@ namespace Help_Desk.DAL
             dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
-            { 
-            atbEstaticos.id_Usuario = Convert.ToInt32(dataReader["id_Usuario"].ToString());
+            {   
+                if(dataReader["id_Usuario"].ToString() == "NULL")
+                {
+                    atbEstaticos.id_Funcionario = Convert.ToInt32(dataReader["id_Funcionario"].ToString());
+                }
+                if (dataReader["id_Funcionario"].ToString() == "NULL")
+                {
+                    atbEstaticos.id_Usuario = Convert.ToInt32(dataReader["id_Usuario"].ToString());
+                }
             }
             try
             {
@@ -47,6 +55,7 @@ namespace Help_Desk.DAL
 
         public Chamado PesquisaSolicitantePorID(Chamado chamado)
         {
+            this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"select nome_Usuario from Usuarios where id_usuario =@id_Usuario";
             cmd.Parameters.AddWithValue("@id_Usuario", atbEstaticos.id_Usuario);
@@ -74,7 +83,7 @@ namespace Help_Desk.DAL
             cmd.Parameters.AddWithValue("@Prioridade", chamado.prioridade);
             cmd.Parameters.AddWithValue("@desc_Chamado", chamado.descricao);
             cmd.Parameters.AddWithValue("@dti_Chamado",chamado.data);
-
+            
             try
             {
                 cmd.Connection = conexaoBD.Conectar();
@@ -96,13 +105,15 @@ namespace Help_Desk.DAL
 
         public void EditarChamado(Chamado chamado)
         {
-            throw new NotImplementedException();
         }
 
         public void ExcluirChamado(Chamado chamado)
         {
-            throw new NotImplementedException();
         }
 
+        public void RecuperarSenha(string cpf)
+        {
+            //
+        }
     }
 }

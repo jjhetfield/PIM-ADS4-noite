@@ -10,5 +10,7 @@ namespace Help_Desk.Modelo
     {
         public static int id_Usuario;
         public static String nome_Usuario;
+        public static int id_Funcionario;
+        public static String nome_Funcionario;
     }
 }

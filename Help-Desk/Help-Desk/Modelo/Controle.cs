@@ -34,8 +34,6 @@ namespace Help_Desk.Modelo
             return chamado;
         }
 
-            
-
         public void CadastraChamado(List<String> dadoschamado)
         {
             this.mensagem = "";

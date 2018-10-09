@@ -17,16 +17,25 @@
             <ComboBoxItem Content="Baixa" HorizontalAlignment="Left" Width="233"/>
         </ComboBox>
         <TextBox x:Name="txbDescriçao" HorizontalAlignment="Left" Height="179" Margin="43,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="606" TabIndex="5" Grid.RowSpan="2"/>
-        <TextBox x:Name="txbSolicitante" HorizontalAlignment="Left" Height="22" Margin="43,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" TabIndex="1" IsEnabled="False"/>
-        <ComboBox x:Name="cbxSetor" HorizontalAlignment="Left" Margin="43,112,0,0" VerticalAlignment="Top" Width="333" Height="26" TabIndex="2">
+        <TextBox x:Name="txbSolicitante" HorizontalAlignment="Left" Height="22" Margin="46,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" TabIndex="1" IsEnabled="False"/>
+        <ComboBox x:Name="cbxSetor" HorizontalAlignment="Left" Margin="45,142,0,0" VerticalAlignment="Top" Width="333" Height="26" TabIndex="2">
             <ComboBoxItem Content="Almoxarifado" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Tecnologia" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Faturamento" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Produção" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Label x:Name="lblSolicitante" Content="Solicitante" HorizontalAlignment="Left" Margin="44,17,0,0" VerticalAlignment="Top" Height="26" Width="65"/>
+        <Label x:Name="lblSolicitante" Content="Solicitante" HorizontalAlignment="Left" Margin="47,69,0,0" VerticalAlignment="Top" Height="26" Width="65" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.435"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
         <Label x:Name="lblPrioridade" Content="Prioridade do pedido" HorizontalAlignment="Left" Margin="43,169,0,0" VerticalAlignment="Top" Height="26" Width="122"/>
-        <Label x:Name="lblSetor" Content="Setor" HorizontalAlignment="Left" Margin="43,86,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label x:Name="lblSetor" Content="Setor" HorizontalAlignment="Left" Margin="45,116,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
         <Label x:Name="lblDescrição" Content="Descrição do pedido" HorizontalAlignment="Left" Margin="43,323,0,0" VerticalAlignment="Top" Height="26" Width="119"/>
         <TextBox x:Name="txbData" HorizontalAlignment="Left" Height="22" Margin="43,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" TabIndex="4" IsEnabled="False"/>
         <Label x:Name="lblData" Content="Data do pedido" HorizontalAlignment="Left" Margin="43,246,0,0" VerticalAlignment="Top" Height="26" Width="93"/>

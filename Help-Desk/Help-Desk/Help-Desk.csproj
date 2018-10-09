@@ -74,8 +74,29 @@
       <DependentUpon>frmLogin.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Apresentacao\frmMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apresentacao\frmPEE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apresentacao\frmRecuperarSenha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apresentacao\frmMenu.xaml.cs">
+      <DependentUpon>frmMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmPEE.xaml.cs">
+      <DependentUpon>frmPEE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmRecuperarSenha.xaml.cs">
+      <DependentUpon>frmRecuperarSenha.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DAL\ChamadoDAO.cs" />
     <Compile Include="DAL\Conexao.cs" />
     <Compile Include="DAL\intChamadoDAO.cs" />

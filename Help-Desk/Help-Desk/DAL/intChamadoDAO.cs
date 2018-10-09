@@ -15,6 +15,7 @@ namespace Help_Desk.DAL
         void ExcluirChamado(Chamado chamado);
         bool VerificarLogin(String login, String senha);
         Chamado PesquisaSolicitantePorID(Chamado chamado);
+        void RecuperarSenha(String cpf);
 
         // List<chamado> PesquisarChamadoPorPrioridade(Chamado chamado);
     }

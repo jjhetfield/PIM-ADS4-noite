@@ -29,17 +29,18 @@ namespace Help_Desk
         private void txbEntrar_Click(object sender, RoutedEventArgs e)
         {
             Modelo.Controle controle = new Modelo.Controle();
-            controle.Acessar(txbUsuario.Text, txbSenha.Text);
+            controle.Acessar(txbUsuario.Text, pswSenha.Password);
             if(controle.mensagem.Equals(""))
 
             { 
                 if (controle.possui)
                 {
                     MessageBox.Show("logado com sucesso", "Entrando", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Apresentacao.frmChamado frmC = new Apresentacao.frmChamado();
-                    frmLogin.Close();
-                    frmC.ShowDialog();
-                    
+                    Apresentacao.frmMenu frmMenu = new Apresentacao.frmMenu();
+                    //frmLogin.Close();
+                    frmMenu.ShowDialog();
+                    this.txbUsuario.Clear();
+                    this.pswSenha.Clear();
                 }
                 else
                 {
@@ -51,6 +52,12 @@ namespace Help_Desk
                 MessageBox.Show(controle.mensagem);
             }
 
+        }
+
+        private void lblRecuperarSenha_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Apresentacao.frmRecuperarSenha frmRecuperarSenha = new Apresentacao.frmRecuperarSenha();
+            frmRecuperarSenha.ShowDialog();
         }
     }
 }
