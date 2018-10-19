@@ -24,9 +24,10 @@ namespace Help_Desk.Apresentacao
             InitializeComponent();
 
             Modelo.Controle controle = new Modelo.Controle();
-            controle.PesquisaSolicitantePorID(Modelo.atbEstaticos.id_Usuario);
+            controle.PesquisaSolicitantePorID(Convert.ToInt32(Modelo.atbEstaticos.id_Usuario));
             txbSolicitante.Text = Modelo.atbEstaticos.nome_Usuario;
             txbData.Text = DateTime.Now.ToShortDateString();
+              //  ToString("yyyyMMdd", System.Globalization.CultureInfo.GetCultureInfo("en-US"));
         }
 
         private void btnLimpar_Click(object sender, RoutedEventArgs e)

@@ -8,9 +8,9 @@ namespace Help_Desk.Modelo
 {
     public static class atbEstaticos
     {
-        public static int id_Usuario;
+        public static String id_Usuario;
         public static String nome_Usuario;
-        public static int id_Funcionario;
+        public static String id_Funcionario;
         public static String nome_Funcionario;
     }
 }

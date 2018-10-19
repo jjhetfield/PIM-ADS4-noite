@@ -18,6 +18,7 @@ namespace Help_Desk.Modelo
             ChamadoDAO chamadoDAO = new ChamadoDAO();
             possui = chamadoDAO.VerificarLogin(login, senha);
 
+
             if (!chamadoDAO.mensagem.Equals(""))
             {
                 this.mensagem = chamadoDAO.mensagem;
@@ -45,14 +46,19 @@ namespace Help_Desk.Modelo
                 chamado.usuario = dadoschamado[1];
                 chamado.setor = dadoschamado[2];
                 chamado.prioridade = dadoschamado[3];
-                chamado.descricao = dadoschamado[4];
+                chamado.data = Convert.ToDateTime(dadoschamado[4]);
+                chamado.descricao = dadoschamado[5];
 
-                //chamado.data = dadoschamado[5];
-
-                
+                if (dadoschamado[2] == "" || dadoschamado[4] == "" || dadoschamado[5] == "")
+                {
+                    this.mensagem = "Preencha todos os campos!";
+                }
+                else
+                { 
                 DAL.ChamadoDAO chamadoDAO = new DAL.ChamadoDAO();
                 chamadoDAO.CadastraChamado(chamado);
                 this.mensagem = chamadoDAO.mensagem;
+                }
             }
             else
             {

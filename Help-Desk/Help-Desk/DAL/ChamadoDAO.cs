@@ -26,17 +26,18 @@ namespace Help_Desk.DAL
 
             cmd.Connection = conexaoBD.Conectar();
             dataReader = cmd.ExecuteReader();
-
+           
             while (dataReader.Read())
-            {   
-                if(dataReader["id_Usuario"].ToString() == "NULL")
-                {
-                    atbEstaticos.id_Funcionario = Convert.ToInt32(dataReader["id_Funcionario"].ToString());
-                }
-                if (dataReader["id_Funcionario"].ToString() == "NULL")
-                {
-                    atbEstaticos.id_Usuario = Convert.ToInt32(dataReader["id_Usuario"].ToString());
-                }
+            {
+                atbEstaticos.id_Usuario = Convert.ToString(dataReader["id_Usuario"]);
+                 /*if (dataReader["id_Usuario"].ToString() == "NULL")
+                 {
+                  atbEstaticos.id_Funcionario = Convert.ToString(dataReader["id_Funcionario"]);
+                 }
+                 if (dataReader["id_Funcionario"].ToString() == "NULL")
+                 {
+                     atbEstaticos.id_Usuario = Convert.ToString(dataReader["id_Usuario"]);
+                 }*/
             }
             try
             {
@@ -58,7 +59,7 @@ namespace Help_Desk.DAL
             this.mensagem = "";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = @"select nome_Usuario from Usuarios where id_usuario =@id_Usuario";
-            cmd.Parameters.AddWithValue("@id_Usuario", atbEstaticos.id_Usuario);
+            cmd.Parameters.AddWithValue("@id_Usuario", Convert.ToInt32(atbEstaticos.id_Usuario));
 
             cmd.Connection = conexaoBD.Conectar();
             dataReader = cmd.ExecuteReader();
@@ -82,7 +83,7 @@ namespace Help_Desk.DAL
             cmd.Parameters.AddWithValue("@Setor", chamado.setor);
             cmd.Parameters.AddWithValue("@Prioridade", chamado.prioridade);
             cmd.Parameters.AddWithValue("@desc_Chamado", chamado.descricao);
-            cmd.Parameters.AddWithValue("@dti_Chamado",chamado.data);
+            cmd.Parameters.AddWithValue("@dti_Chamado", Convert.ToDateTime(chamado.data)/*.ToString("yyyyMMdd", System.Globalization.CultureInfo.GetCultureInfo("en-US"))*/);
             
             try
             {
@@ -113,7 +114,9 @@ namespace Help_Desk.DAL
 
         public void RecuperarSenha(string cpf)
         {
-            //
+            
         }
+
+        
     }
 }

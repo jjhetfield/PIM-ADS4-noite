@@ -28,6 +28,8 @@ namespace Help_Desk
 
         private void txbEntrar_Click(object sender, RoutedEventArgs e)
         {
+
+
             Modelo.Controle controle = new Modelo.Controle();
             controle.Acessar(txbUsuario.Text, pswSenha.Password);
             if(controle.mensagem.Equals(""))

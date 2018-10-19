@@ -14,3 +14,9 @@ C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.csproj.Ge
 C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.csproj.CoreCompileInputs.cache
 C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.exe
 C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Help-Desk.pdb
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmMenu.g.cs
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmPEE.g.cs
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmRecuperarSenha.g.cs
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmMenu.baml
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmPEE.baml
+C:\Users\Danilo\source\repos\Help-Desk\Help-Desk\obj\Release\Apresentacao\frmRecuperarSenha.baml

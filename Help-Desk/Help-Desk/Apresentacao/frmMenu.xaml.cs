@@ -23,10 +23,19 @@ namespace Help_Desk.Apresentacao
         {
             InitializeComponent();
 
-            if (Modelo.atbEstaticos.id_Funcionario == 0)
+            if (Modelo.atbEstaticos.id_Funcionario == "")
             {
-                this.mniAdministrador.IsEnabled = false;
-
+                
+                this.mniCadastrar.IsEnabled = false;
+                this.mniVisualizar.IsEnabled = false;
+            }
+            else
+      
+            {
+                if (Modelo.atbEstaticos.id_Usuario == "")
+                {
+                    this.mniAdministrador.IsEnabled = false;
+                }
             }
         }
 
