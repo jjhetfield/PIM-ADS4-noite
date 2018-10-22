@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Abrir Chamado";
+}
+
+<h2>Index</h2>
+<form name="Chamado" method="POST">
+    <label for="nome">Nome do Solicitante</label><br>
+    <input type="text" name="nome"><br>
+    <label for="setor">Setor</label><br>
+    <input type="text" name="setor"><br>
+    <label for="prioridade">Prioridade</label><br>
+    <select>
+        <option value="alta">Alta</option>
+        <option value="media">Média</option>
+        <option value="baixa">Baixa</option>
+    </select><br>
+    <label for="descricao">Descrição</label><br>
+    <input type="text" name="descricao"><br><br>
+    <input type="submit" name="enviar" value="Enviar">
