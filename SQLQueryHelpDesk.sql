@@ -44,14 +44,17 @@ insert into Acesso values ( 3,'adm','senha123')
 Create table Chamados(
 id_Chamado int identity (1,1) primary key,
 id_Usuario int null,
+id_Funcionario int null,
 Setor varchar (60) not null,
 Prioridade varchar (40) not null,
 Status_Chamado varchar (40) null,
 desc_Chamado varchar (255) not null ,
-dti_Chamado date not null,
+dta_Chamado date not null,
+dti_Chamado date null,
 dtf_Chamado date null,
 solucao_Chamado varchar (255) null,
-CONSTRAINT  fk_Usuario_Chamado  Foreign key (id_Usuario) References Usuarios (id_Usuario)
+CONSTRAINT  fk_Usuario_Chamado  Foreign key (id_Usuario) References Usuarios (id_Usuario),
+CONSTRAINT  fk_Funcionario_Chamado  Foreign key (id_Funcionario) References Usuarios (id_Usuario)
 );
 go
 
@@ -59,6 +62,14 @@ select * from Usuarios
 
 select * from TipoUsuario
 
-select * from Chamados
+select * from Chamados 
+
+select id_Chamado , Setor, Prioridade, desc_Chamado, dti_Chamado from Chamados where id_Usuario = 2 
 
 select * from Acesso
+
+update Chamados	set solucao_Chamado = 'solucionado' where id_Chamado = 12
+
+select * from Chamados where Status_Chamado = 'Finalizado' and id_Funcionario = 3
+
+delete from Chamados where Status_Chamado = 'Aberto'
