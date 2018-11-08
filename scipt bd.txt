@@ -10,9 +10,6 @@ desc_TipoUsuario varchar (20) not null,
 )
 go
 
-insert into TipoUsuario values ('comum')   
-insert into TipoUsuario values ('administrador')   
-
 Create table Usuarios(
 id_Usuario int identity (1,1) primary key,
 id_TipoUsuario int not null,
@@ -26,9 +23,6 @@ CONSTRAINT  fk_TipoUsuario_Usuario  Foreign key (id_TipoUsuario) References Tipo
 )
 go
 
-insert into Usuarios values (1,'377799725','44815102856','Danilo Vinter','985296363','969693636','danlo.vinter@hotmail.com')
-insert into Usuarios values (2,'456222233','25635563222','Adiministrador','982223336','970700777','administrador@live.com')
-
 Create table Acesso(
 id_Acesso int identity (1,1) primary key,
 id_Usuario int null,
@@ -37,12 +31,7 @@ senha_Acesso varchar (8) not null,
 CONSTRAINT  fk_Usuario_Acesso  Foreign key (id_Usuario) References Usuarios (id_Usuario)
 )
 go
-select * from Acesso
-insert into Acesso values ( 2,'user','12345678')   
-insert into Acesso values ( 3,'adm','senha123')       
 
-update Acesso set nome_Acesso = 'a', senha_Acesso = '1' where id_Acesso = 2
-update Acesso set nome_Acesso = 'u', senha_Acesso = '1' where id_Acesso = 1
 Create table Chamados(
 id_Chamado int identity (1,1) primary key,
 id_Usuario int null,
@@ -59,23 +48,3 @@ CONSTRAINT  fk_Usuario_Chamado  Foreign key (id_Usuario) References Usuarios (id
 CONSTRAINT  fk_Funcionario_Chamado  Foreign key (id_Funcionario) References Usuarios (id_Usuario)
 );
 go
-
-select * from Usuarios
-
-select * from TipoUsuario
-
-select * from Chamados 
-
-select id_Chamado , Setor, Prioridade, desc_Chamado, dti_Chamado from Chamados where id_Usuario = 2 
-
-select * from Acesso
-
-update Chamados	set solucao_Chamado = 'solucionado' where id_Chamado = 12
-
-select * from Chamados where id_Chamado = 4
-
-delete from Chamados where id_Chamado = 5 
-
-Declare @id_Usuario int 
-
-select id_Usuario from Usuarios where cpf_Usuario = 44815102856
